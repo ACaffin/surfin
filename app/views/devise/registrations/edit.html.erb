@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-md-4 col-md-offset-4 text-center">
 
-    <h2>Modifier mon profil <%= resource_name.to_s.humanize %></h2>
+    <h2>Modifier mon profil</h2>
     
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
       <%= devise_error_messages! %>
@@ -17,6 +17,10 @@
       <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
         <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
       <% end %>
+      
+      <div class="form-group">
+        <%= f.file_field :avatar %>
+      </div>
     
       <div class="form-group">
         <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "Nouveau mot de passe" %>
@@ -28,7 +32,7 @@
     
       <div class="form-group">
         <br />
-        <%= f.password_field :current_password, autocomplete: "off", class: "form-control", placeholder: "Mot de passe pour confirmer le changement" %>
+        <%= f.password_field :current_password, autocomplete: "off", class: "form-control", placeholder: "Mot de passe pour confirmer tout changement" %>
       </div>
     
       <div class="actions">

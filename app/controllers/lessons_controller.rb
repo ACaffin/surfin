@@ -17,7 +17,7 @@ before_action :require_same_user, only: [:edit, :update]
         if @lesson.save
             if params[:images]
                 params[:images].each do |i|
-                    @lesson.photos.creat(image: i)
+                    @lesson.photos.create(image: i)
                 end
             end
             @photos = @lesson.photos
@@ -39,7 +39,7 @@ before_action :require_same_user, only: [:edit, :update]
         if @lesson.update(lesson_params)
             if params[:images]
                 params[:images].each do |i|
-                    @lesson.photos.creat(image: i)
+                    @lesson.photos.create(image: i)
                 end
             end
             @photos = @lesson.photos

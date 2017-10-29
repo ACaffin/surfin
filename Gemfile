@@ -18,9 +18,17 @@ gem 'bootstrap-sass'
 
 #devise
 gem 'devise'
-gem 'devise-i18n'
 
+#gem pour la langue français
+gem 'devise-i18n'
+gem 'rails-i18n'
+
+#gem pour la photo de profil
 gem "paperclip"
+
+#gem pour les notifications
+gem 'toastr-rails'
+
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

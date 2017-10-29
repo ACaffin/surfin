@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  lesson_level: MyString
+  lesson_duration: MyString
+  is_equipment: MyString
+  price: 1
+  active: false
+  user_id: 
+
+two:
+  lesson_level: MyString
+  lesson_duration: MyString
+  is_equipment: MyString
+  price: 1
+  active: false
+  user_id: 

@@ -11,7 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171028162714) do
+ActiveRecord::Schema.define(version: 20171029120857) do
+
+  create_table "lessons", force: :cascade do |t|
+    t.string   "lesson_level"
+    t.string   "lesson_duration"
+    t.string   "is_equipment"
+    t.integer  "price"
+    t.boolean  "active"
+    t.integer  "user_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  add_index "lessons", ["user_id"], name: "index_lessons_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

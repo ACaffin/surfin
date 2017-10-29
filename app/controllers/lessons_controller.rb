@@ -1,13 +1,13 @@
-class LessonController < ApplicationController
+class LessonsController < ApplicationController
 
 before_action :set_lesson, only: [:show, :edit, :update]
-defore_action :authenticate_user!, except: [show]
+before_action :authenticate_user!, except: [:show]
 
     def index
         @lessons = current_user.lessons
     end
     
-    def
+    def new
         @lesson = current_user.lessons.build
     end
 
@@ -42,7 +42,5 @@ private
     def lesson_params
        params.require(:lesson).permit(:lesson_level, :lesson_duration, :price, :is_equipment, :active) 
     end
-    
-    
     
 end

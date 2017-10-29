@@ -1,0 +1,59 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        Proposez une leçon de surf
+    </div>
+    <div class="panel-body">
+        <div class="container">
+            <%= form_for @lesson do |f| %>
+                
+                <div class="row">
+                    <div class="col-md-4 select">
+                        <div class="form-group">
+                            <label>Niveau de la lesson</label>
+                            <%= f.select :lesson_level, [["Tous niveaux","Tous niveaux"],["Débutant","Débutant"],["Intermédaire","Intermédaire"],
+                            ["Avancé","Avancé"]], id: "lesson_level", prompt:"A sélectionner...", class:"form-control" %>
+                        </div>
+                    </div>
+                    <div class="col-md-4 select">
+                        <div class="form-group">
+                            <label>Durée de la lesson</label>
+                            <%= f.select :lesson_duration, [["1h","1h"],["2h","2h"],["3h","3h"]],
+                            prompt:"A sélectionner...", class:"form-control" %>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <%= f.check_box :is_equipment %> Equipement fourni
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Prix de la leçon</label>
+                            <div class="input-group">
+                                <%= f.text_field :price, placeholder:"ex: 50€", class: "form-control" %>
+                            </div>
+                            <div class="input-group-addon">€</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="form-group">
+                        <%= f.check_box :active %> Publier l'annonce
+                    </div>
+                </div>
+                
+                <div class="actions">
+                    <%= f.submit "Poster ma lesson", class:"btn btn-primary" %>
+                </div>
+            
+            <% end %>
+        </div>
+    </div>
+</div>

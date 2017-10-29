@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   root 'pages#home'
   
   resources :users, only: [:show]
-  resource :lessons
+  resources :lessons
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

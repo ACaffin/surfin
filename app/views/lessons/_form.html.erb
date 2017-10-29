@@ -5,6 +5,7 @@
     <div class="panel-body">
         <div class="container">
             <%= form_for @lesson do |f| %>
+            <%=render 'shared/errors' %>
                 
                 <div class="row">
                     <div class="col-md-4 select">
@@ -14,6 +15,8 @@
                             ["Avancé","Avancé"]], id: "lesson_level", prompt:"A sélectionner...", class:"form-control" %>
                         </div>
                     </div>
+                </div>
+                <div class="row">
                     <div class="col-md-4 select">
                         <div class="form-group">
                             <label>Durée de la lesson</label>
@@ -37,8 +40,8 @@
                             <label>Prix de la leçon</label>
                             <div class="input-group">
                                 <%= f.text_field :price, placeholder:"ex: 50€", class: "form-control" %>
-                            </div>
                             <div class="input-group-addon">€</div>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -1,5 +1,6 @@
 class Lesson < ActiveRecord::Base
   belongs_to :user
+  has_many :photos
   
   validates :lesson_level, presence: true
   validates :lesson_duration, presence: true

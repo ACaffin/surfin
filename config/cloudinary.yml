@@ -2,10 +2,10 @@ production:
 
 cloud_name: "hezordb4b"
 
-api-key:<%= ENV["CLOUDINARY_API_KEY"] %>
+api_key:<%= ENV["CLOUDINARY_API_KEY"] %>
 
-api-secret:<%= ENV["CLOUDINARY_API_SECRET"] %>
+api_secret:<%= ENV["CLOUDINARY_API_SECRET"] %>
 
 enhance_image_tag:true
 
-statc_image_support:true
+static_image_tag:true

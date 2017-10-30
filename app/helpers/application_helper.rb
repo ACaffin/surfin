@@ -3,7 +3,7 @@ module ApplicationHelper
     def avatar_url(user)
         if user.avatar.present?
             user.avatar.url
-        else
+        else 
             'default_image.png'
         end
     end

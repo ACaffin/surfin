@@ -29,11 +29,6 @@ gem "paperclip"
 #gem pour les notifications
 gem 'toastr-rails'
 
-#gem pour fontawesome
-gem 'font-awesome-sass'
-
-#cloudinary
-gem 'paperclip-cloudinary'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

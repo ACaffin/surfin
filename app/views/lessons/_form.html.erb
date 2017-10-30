@@ -4,8 +4,7 @@
     </div>
     <div class="panel-body">
         <div class="container">
-            <%= form_for @lesson, html: {multipart: true} do |f| %>
-            <%=render 'shared/errors' %>
+            <%= form_for @lesson do |f| %>
                 
                 <div class="row">
                     <div class="col-md-4 select">
@@ -15,8 +14,6 @@
                             ["Avancé","Avancé"]], id: "lesson_level", prompt:"A sélectionner...", class:"form-control" %>
                         </div>
                     </div>
-                </div>
-                <div class="row">
                     <div class="col-md-4 select">
                         <div class="form-group">
                             <label>Durée de la lesson</label>
@@ -40,24 +37,11 @@
                             <label>Prix de la leçon</label>
                             <div class="input-group">
                                 <%= f.text_field :price, placeholder:"ex: 50€", class: "form-control" %>
-                            <div class="input-group-addon">€</div>
                             </div>
+                            <div class="input-group-addon">€</div>
                         </div>
                     </div>
                 </div>
-                
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="form-group">
-                            <span class="btn btn-default btn-file">
-                                <i class="fa fa-cloud-upload fa-lg"></i> Télécharger vos photos
-                                <%= file_field_tag "images[]", type: :file, multiple: true %>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div id="photos"><%= render 'photos/list' %></div>
                 
                 <div class="row">
                     <div class="form-group">

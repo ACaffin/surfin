@@ -1,8 +1,0 @@
-<% unless @lesson.errors.empty? %>
-    <script type="text/javascript">
-        <% @lesson.errors.full_messages.each do |msg| %>
-            toastr.error('<%= msg %>')
-        <% end %>
-    </script>
-
-<% end %>
